@@ -152,24 +152,130 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-有道云笔记Markdown操作指南" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-vscode下Markdown操作指南" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/18/vscode下Markdown操作指南/">vscode下Markdown操作指南</a>
+    </h1>
+  
+
+        
+        <a href="/2018/09/18/vscode下Markdown操作指南/" class="archive-article-date">
+  	<time datetime="2018-09-18T13:18:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-18</time>
+</a>
+        
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    printf(&quot;hello world&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="To-do-List"><a href="#To-do-List" class="headerlink" title="To-do List"></a>To-do List</h1><ul>
-<li style="list-style: none"><input type="checkbox"> 表示未完成</li>
-<li style="list-style: none"><input type="checkbox" checked> 表示已完成</li>
-</ul>
-<p>注：键入字符与字符之间都要保留一个字符的空格。</p>
-<h1 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A--&gt;B</span><br></pre></td></tr></table></figure>
-<h3 id="书写graph-XX-用以确定将要绘制的流程图及其类型（XX表示流程图类型）。"><a href="#书写graph-XX-用以确定将要绘制的流程图及其类型（XX表示流程图类型）。" class="headerlink" title="书写graph XX 用以确定将要绘制的流程图及其类型（XX表示流程图类型）。"></a>书写graph XX 用以确定将要绘制的流程图及其类型（XX表示流程图类型）。</h3><p>TB - top bottom（自上而下）<br>BT - bottom top（自下而上）<br>RL - right left（从右到左）<br>LR - left right（从左到右）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">    A[aaa]--&gt;B(bbb)</span><br><span class="line">    B--&gt;C(ccc)</span><br><span class="line">    C--&gt;D(ddd)</span><br><span class="line">    C--&gt;E(eee)</span><br><span class="line">    C--&gt;F(fff)</span><br><span class="line">    E--&gt;|One|M(mmm)</span><br><span class="line">    E--&gt;|Two|N(nnn)</span><br><span class="line">    E--&gt;|Three|O(ooo)</span><br></pre></td></tr></table></figure></p>
-<h1 id="框线形状调整"><a href="#框线形状调整" class="headerlink" title="框线形状调整"></a>框线形状调整</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">    A[直角四边形]</span><br><span class="line">    B(圆角)</span><br><span class="line">    C&#123;菱形&#125;</span><br><span class="line">    D((圆形))</span><br></pre></td></tr></table></figure>
-<h1 id="箭头的调整"><a href="#箭头的调整" class="headerlink" title="箭头的调整"></a>箭头的调整</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">    A---B</span><br><span class="line">    B--&gt;C</span><br><span class="line">    C--&gt;|插入文本|D</span><br></pre></td></tr></table></figure>
-<p><a href="">百度</a><br><img src="http://note.youdao.com/favicon.ico" alt="image"></p>
+        <h3 id="用vscode写markdown操作"><a href="#用vscode写markdown操作" class="headerlink" title="用vscode写markdown操作"></a>用vscode写markdown操作</h3><h2 id="TOC"><a href="#TOC" class="headerlink" title="[TOC]"></a>[TOC]</h2><h5 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#标题1</span><br><span class="line">##标题2</span><br><span class="line">###标题3</span><br><span class="line">####标题4</span><br><span class="line">#####标题5</span><br><span class="line">######标题6</span><br></pre></td></tr></table></figure>
+<p>演示:</p>
+<p><img src="./biaoti.png" alt=""></p>
 <hr>
-<p>分割线</p>
+<h5 id="2-分级标题"><a href="#2-分级标题" class="headerlink" title="2.分级标题"></a>2.分级标题</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">一级标题</span><br><span class="line">==========</span><br><span class="line"></span><br><span class="line">二级标题</span><br><span class="line">----------</span><br><span class="line">注：实际为内容的下一行输&quot;-&quot;或“=”;最少可以写一个</span><br></pre></td></tr></table></figure>
+<p>演示：</p>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><hr>
+<h5 id="3-粗体、斜体、删除线"><a href="#3-粗体、斜体、删除线" class="headerlink" title="3.粗体、斜体、删除线"></a>3.粗体、斜体、删除线</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*表示斜体</span><br><span class="line">**表示粗体</span><br><span class="line">~~表示删除线</span><br></pre></td></tr></table></figure>
+<p>演示：</p>
+<p>这是<em>斜体</em><br>这是<strong>粗体</strong><br><del>这是错误的文本</del></p>
+<hr>
+<h5 id="4-引用"><a href="#4-引用" class="headerlink" title="4.引用"></a>4.引用</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">方法一:(单行式)</span><br><span class="line">&gt; hello</span><br></pre></td></tr></table></figure>
+<p>演示：</p>
+<blockquote>
+<p>hello<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">方法二:(多行式)</span><br><span class="line">&gt; hello</span><br><span class="line">world</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>演示：</p>
+<blockquote>
+<p>hello<br>world<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">方法三:(多层嵌套)</span><br><span class="line">&gt;aaa</span><br><span class="line">&gt;&gt;bbb</span><br><span class="line">&gt;&gt;&gt;ccc</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>演示：</p>
+<blockquote>
+<p>aaa</p>
+<blockquote>
+<p>bbb</p>
+<blockquote>
+<p>ccc</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<hr>
+<p>#####5.行内标记<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">将标记代码块变成一行</span><br><span class="line">`aaaaaaaa</span><br><span class="line"> bbbbbbbb</span><br><span class="line"> cccccccc`</span><br></pre></td></tr></table></figure></p>
+<p>演示：<br><code>aaaaaaaa
+ bbbbbbbb
+ cccccccc</code></p>
+<hr>
+<h5 id="6-生成代码块"><a href="#6-生成代码块" class="headerlink" title="6.生成代码块"></a>6.生成代码块</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">方法一：用```生成代码块</span><br><span class="line">eg:</span><br></pre></td></tr></table></figure>
+<pre><code>aaa
+bbb
+ccc
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">```  </span><br><span class="line">演示：</span><br></pre></td></tr></table></figure>
+</code></pre><p>aaa<br>bbb<br>ccc<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"> 方法二：用Tab缩进生成代码块</span><br><span class="line">    aaa</span><br><span class="line">    bbb</span><br><span class="line">    ccc</span><br><span class="line">```  </span><br><span class="line">演示：</span><br><span class="line"></span><br><span class="line">    aaa</span><br><span class="line">    bbb</span><br><span class="line">    ccc</span><br></pre></td></tr></table></figure></p>
+<p>方法三：根据不同语言配置不同的代码着色<br> eg:<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"hello world!"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>演示：<br> <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"hello world!"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h5 id="7-插入本地图片"><a href="#7-插入本地图片" class="headerlink" title="7.插入本地图片"></a>7.插入本地图片</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](./本地图片名)</span><br></pre></td></tr></table></figure>
+<p>演示：</p>
+<p><img src="./1.jpg" alt=""></p>
+<hr>
+<h5 id="8-有序、无序"><a href="#8-有序、无序" class="headerlink" title="8.有序、无序"></a>8.有序、无序</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">有序：</span><br><span class="line">1. one</span><br><span class="line">2. two</span><br><span class="line">3. three</span><br><span class="line"></span><br><span class="line">无序：</span><br><span class="line">* one</span><br><span class="line">* two</span><br><span class="line">* three</span><br><span class="line"></span><br><span class="line">序表嵌套：</span><br><span class="line">1. one</span><br><span class="line">    * one-one</span><br><span class="line">    * one-two</span><br><span class="line">2. two</span><br><span class="line">    * two-one</span><br><span class="line">    * two-two</span><br></pre></td></tr></table></figure>
+<p>演示：</p>
+<ol>
+<li>one</li>
+<li>two</li>
+<li>three</li>
+</ol>
+<ul>
+<li>one</li>
+<li>two</li>
+<li>three</li>
+</ul>
+<ol>
+<li>one<ul>
+<li>one-one</li>
+<li>one-two</li>
+</ul>
+</li>
+<li>two<ul>
+<li>two-one</li>
+<li>two-two</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h5 id="9-任务列表"><a href="#9-任务列表" class="headerlink" title="9.任务列表"></a>9.任务列表</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- [x] A</span><br><span class="line">- [ ] B</span><br><span class="line">- [ ] [正确]</span><br><span class="line">注：每个符号中间都有空格</span><br></pre></td></tr></table></figure>
+<p>演示：</p>
+<ul>
+<li style="list-style: none"><input type="checkbox" checked> A</li>
+<li style="list-style: none"><input type="checkbox"> B</li>
+<li style="list-style: none"><input type="checkbox"> [正确]</li>
+</ul>
+<hr>
+<h5 id="10-表格"><a href="#10-表格" class="headerlink" title="10.表格"></a>10.表格</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">注： : 代表对齐方式 , : 与 | 之间不要有空格，否则对齐会有些不兼容</span><br><span class="line">|111111111 |22222222|33333333|</span><br><span class="line">|:- |:-:|-:|</span><br><span class="line">|居左|居中|居右|</span><br><span class="line">|a|b|c|</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">11111111</th>
+<th style="text-align:center">22222222</th>
+<th style="text-align:right">33333333</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">居左</td>
+<td style="text-align:center">居中</td>
+<td style="text-align:right">居右</td>
+</tr>
+<tr>
+<td style="text-align:left">a</td>
+<td style="text-align:center">b</td>
+<td style="text-align:right">c</td>
+</tr>
+</tbody>
+</table>
 
       
 
@@ -182,7 +288,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/16/有道云笔记Markdown操作指南/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/09/18/vscode下Markdown操作指南/">展开全文 >></a>
         </p>
       
 
@@ -245,77 +351,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/09/16/my-first-blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/16/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/16/hello-world/" class="archive-article-date">
-  	<time datetime="2018-09-16T07:34:30.845Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/16/hello-world/">展开全文 >></a>
         </p>
       
 
