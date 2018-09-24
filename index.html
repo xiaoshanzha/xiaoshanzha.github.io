@@ -152,6 +152,184 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-java面向对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/24/java面向对象/">java面向对象</a>
+    </h1>
+  
+
+        
+        <a href="/2018/09/24/java面向对象/" class="archive-article-date">
+  	<time datetime="2018-09-24T09:27:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>java面向对象<br>[TOC]</p>
+<h3><span id="面向过程和面向对象的思想">面向过程和面向对象的思想</span></h3><pre><code>* a: 面向过程的程序设计方式，是遇到一件事时，思考“我该怎么做”，然后一步步实现的过程。
+* b: 面向对象的程序设计方式，是遇到一件事时，思考“我该让谁来做”，然后那个“谁”就是对象，他要怎么做这件事就是对象的方法。
+</code></pre><h3><span id="面向对象的好处">面向对象的好处</span></h3><pre><code>* a: 面向对象思维方式是一种更符合人们思考习惯的思想
+* b: 面向过程思维方式中更多的体现的是执行者（自己做事情），面向对象中更多的体现是指挥者（指挥对象做事情）。
+* c: 面向对象思维方式将复杂的问题简单化。
+</code></pre><h3><span id="一些基本概念">一些基本概念：</span></h3><h4><span id="堆和栈">堆和栈</span></h4><pre><code>栈内存中存放基本数据类型、局部变量，用完就消失。变量必须初始化。
+堆内存用来存放由new创建的对象和数组，靠垃圾回收机制不定期自动清除。变量会有默认值，不用初始化。
+</code></pre><h4><span id="成员变量和局部变量">成员变量和局部变量</span></h4><pre><code>区别：
+1.定义的位置不同
+    * 定义在类中的变量是成员变量
+    * 定义在方法中或者{}语句里面的变量是局部变量
+2.在内存中的位置不同
+    * 成员变量存储在堆内存的对象中
+    * 局部变量存储在栈内存的方法中
+3.声明周期不同
+    * 成员变量随着对象的出现而出现在堆中，随着对象的消失而从堆中消失
+    * 局部变量随着方法的运行而出现在栈中，随着方法的弹栈而消失
+4.初始化不同
+    * 成员变量因为在堆内存中，所有默认的初始化值
+    * 局部变量没有默认的初始化值，必须手动的给其赋值才可以使用。
+</code></pre><h3><span id="权限修饰符">权限修饰符</span></h3><table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">public</th>
+<th style="text-align:center">protected</th>
+<th style="text-align:center">默认的</th>
+<th style="text-align:center">private</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">当前类中</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">同一包中其它类</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td style="text-align:center">不同包中子类</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">不同包中其他类</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<h3><span id="final-static关键字">final、static关键字</span></h3><ul>
+<li>final关键字：最终<ul>
+<li>修饰的类：不能被继承</li>
+<li>修饰的变量：相当于是一个常量</li>
+<li>修饰的方法：子类不能重写，但可以继承使用</li>
+</ul>
+</li>
+<li>static关键字：静态<ul>
+<li>被静态所修饰的成员，可以通过类名直接调用<ul>
+<li>Person.name = “山楂”;<br>Person.method();</li>
+</ul>
+</li>
+<li>静态方法，随着类的加载而加载，优先于对象存在<br>在静态方法中，没有this关键字<br>静态方法中只能调用静态的成员变量和方法</li>
+</ul>
+</li>
+</ul>
+<h3><span id="三大特点封装-继承-多态">三大特点:封装、继承、多态</span></h3><ul>
+<li>封装：把对象的属性与方法的实现细节隐藏，仅对外提供一些公共的访问方式</li>
+<li>继承：子类会自动拥有父类所有可继承的属性和方法。</li>
+<li>多态：配合继承与方法重写提高了代码的复用性与扩展性；如果没有方法重写，则多态同样没有意义。</li>
+</ul>
+<h4><span id="1封装">1.封装</span></h4><h5><span id="私有private">私有private</span></h5><p>私有仅仅是封装的体现形式而已。<br>类中不需要对外提供的内容都私有化，包括属性和方法。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">	<span class="comment">// 私有成员变量，私有化后外界将不能访问.即隐藏了该属性</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">	<span class="keyword">private</span> String name;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5><span id="get-set方法">get、set方法</span></h5><p>向外界提供私有化内容的访问方式<br>描述事物，属性都私有化，并提供setXxx getXxx方法对其进行访问。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">person</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span>  <span class="keyword">int</span> old;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 对外提供设置成员变量的方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setOld</span><span class="params">(<span class="keyword">int</span> old)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.old = old;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 对外提供访问成员变量的方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getOld</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> old;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	person p = <span class="keyword">new</span> person();</span><br><span class="line"></span><br><span class="line">	p.setOld(<span class="number">5</span>);</span><br><span class="line">	System.out.println(p.getOld());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h5><span id="this关键字">this关键字</span></h5><p>当在方法中出现了局部变量和成员变量同名的时候，可以在成员变量名前面加上this.来区别成员变量和局部变量</p>
+<hr>
+<h4><span id="2继承">2.继承</span></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">格式：class Zi extends Fu &#123;&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在一个现有类的基础上去构建一个新的类，构建出来的新类被称作子类，现有类被称作父类，子类会自动拥有父类所有属性方法。</li>
+<li>在Java中，类只支持单继承，不允许多继承，也就是说一个类只能有一个直接父类，</li>
+<li>Fu类中的成员变量是非私有的，子类中可以直接访问，若Fu类中的成员变量私有了，子类是不能直接访问的。</li>
+</ul>
+<h5><span id="super关键字">super关键字</span></h5><ul>
+<li><p>当子父类中出现了同名成员变量时，在子类中若要访问父类中的成员变量，必须使用关键字super来完成。super用来表示当前对象中包含的父类对象空间的引用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">super.父类中的成员变量</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>方法重写(覆盖)<br>当在程序中通过对象调用方法时，会先在子类中查找有没有对应的方法，若子类中存在就会执行子类中的方法，若子类中不存在就会执行父类中相应的方法。子类中出现与父类一模一样的方法时，会出现覆盖操作，即重写。<br>注意：</p>
+<ul>
+<li>子类方法覆盖父类方法，必须要保证权限大于等于父类权限。</li>
+<li>写法上必须一模一样:方法的返回值类型 方法名 参数列表都要一样。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4><span id="3多态">3.多态</span></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">格式1：</span><br><span class="line">父类类型  变量名 = new 子类类型();</span><br><span class="line"></span><br><span class="line">格式2：</span><br><span class="line">接口 变量名 = new 接口实现类();</span><br></pre></td></tr></table></figure>
+<ul>
+<li>java中多态的代码体现在一个子类对象(实现类对象)既可以给这个子类(实现类对象)引用变量赋值，又可以给这个子类(实现类对象)的父类(接口)变量赋值</li>
+<li>多态最终体现为父类引用变量可以指向子类对象。</li>
+<li>多态的前提是必须有子父类关系或者类实现接口关系，否则无法完成多态。</li>
+<li>同一个父类的方法会被不同的子类重写。在调用方法时，调用的为各个子类重写后的方法。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Person p1 = <span class="keyword">new</span> Student();</span><br><span class="line">Person p2 = <span class="keyword">new</span> Teacher();</span><br><span class="line">p1.work(); <span class="comment">//p1会调用Student类中重写的work方法</span></span><br><span class="line">p2.work(); <span class="comment">//p2会调用Teacher类中重写的work方法</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>注意：</p>
+<ul>
+<li>多态成员变量： 编译运行都看左边（编译时期看引用型变量所属的类中是否有被调用的成员变量,没有则编译失败;运行时期，调用引用型变量所属的类中的成员变量。）</li>
+<li>多态成员方法： 编译看左边，运行看右边</li>
+</ul>
+<h3><span id="instance关键字">instance关键字</span></h3><p>判断某个对象是否属于某种数据类型<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//是返回true,不是返回false;</span><br><span class="line">boolean  b  = 对象  instanceof  数据类型;</span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/24/java面向对象/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-vscode下markdown操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
