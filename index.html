@@ -1,55 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hans">
 <head>
-  <meta charset="utf-8">
-  <meta name="baidu-site-verification" content="L6Lm9d5Crl"/>
-  
-  
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="Shan Zha" />
+
+
+    
+    
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="ShanZha&#39;s Blog">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="default">
+<meta property="og:site_name" content="ShanZha&#39;s Blog">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-  
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/img/bg.jpg">
-  
-  
-  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  
-    
-    
-  
-  
-      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  
-  <!-- 加载特效 -->
-    <script src="/js/pace.js"></script>
-    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
-  <script>
-      var yiliaConfig = {
-          fancybox: true,
-          animate: true,
-          isHome: true,
-          isPost: false,
-          isArchive: false,
-          isTag: false,
-          isCategory: false,
-          open_in_new: false
-      }
-  </script>
+<meta name="twitter:title" content="ShanZha&#39;s Blog">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="ShanZha&#39;s Blog" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <style> .article { opacity: 0;} </style>
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>ShanZha&#39;s Blog</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: true,
+        isPost: false,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
 </head>
 <body>
   <div id="container">
@@ -57,70 +99,25 @@
     <div class="overlay"></div>
 <div class="intrude-less">
     <header id="header" class="inner">
-        
-<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-
         <a href="/" class="profilepic">
-            
-            <img lazy-src="/img/my.jpg" class="js-avatar">
-            
+            <img src="/img/my.jpg" class="animated zoomIn">
         </a>
         <hgroup>
           <h1 class="header-author"><a href="/">Shan Zha</a></h1>
         </hgroup>
+
         
+
         
-            <form>
-                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
             </form>
             <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
         
-        
-            <script type="text/javascript">
-                (function() {
-                    'use strict';
-                    function getMatchData(keyword, data) {
-                        var matchData = [];
-                        for(var i =0;i<data.length;i++){
-                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
-                                matchData.push(data[i])
-                        }
-                        return matchData;
-                    }
-                    var $input = $('#local-search-input');
-                    var $resultContent = $('#local-search-result');
-                    $input.keyup(function(){
-                        $.ajax({
-                            url: '/search.json',
-                            dataType: "json",
-                            success: function( json ) {
-                                var str='<ul class=\"search-result-list\">';                
-                                var keyword = $input.val().trim().toLowerCase();
-                                $resultContent.innerHTML = "";
-                                if ($input.val().trim().length <= 0) {
-                                    $resultContent.empty();
-                                    $('#switch-area').show();
-                                    return;
-                                }
-                                var results = getMatchData(keyword, json);
-                                if(results.length === 0){
-                                    $resultContent.empty();
-                                    $('#switch-area').show();
-                                    return;
-                                } 
-                                for(var i =0; i<results.length; i++){
-                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
-                                }
-                                str += "</ul>";
-                                $resultContent.empty();
-                                $resultContent.append(str);
-                                $('#switch-area').hide();
-                            }
-                        });
-                    });
-                })();
-            </script>
-        
+
+
         
             <div id="switch-btn" class="switch-btn">
                 <div class="icon">
@@ -145,6 +142,7 @@
                         </div>
                         
                     </div>
+                    
                 </div>
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
@@ -161,36 +159,34 @@
                 </div>
             </div>
         
+
         <div id="switch-area" class="switch-area">
             <div class="switch-wrap">
                 <section class="switch-part switch-part1">
                     <nav class="header-menu">
                         <ul>
                         
-                            <li><a  href="/archives/">所有文章</a></li>
+                            <li><a href="/">主页</a></li>
                         
-                            <li><a  href="/categories/开发工具/">玩转开发工具</a></li>
+                            <li><a href="/archives/">所有文章</a></li>
                         
-                            <li><a  href="/categories/digital">玩转数码</a></li>
-                        
-                            <li><a  href="/categories/algorithm">算法学习</a></li>
-                        
-                            <li><a  href="/about/">关于我</a></li>
+                            <li><a href="/tags/">标签云</a></li>
                         
                         </ul>
                     </nav>
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fl github"  target="_blank" href="https://github.com/xiaoshanzha" title="github">github</a>
+                                <a class="fa Email" href="mailto:123@123.com" title="Email"></a>
                             
-                                <a class="fl weibo"  target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                                <a class="fa GitHub" href="https://github.com/xiaoshanzha" title="GitHub"></a>
                             
-                                <a class="fl rss"  target="_blank" href="/atom.xml" title="rss">rss</a>
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
                             
                         </ul>
                     </nav>
                 </section>
+                
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
@@ -199,30 +195,31 @@
                 </section>
                 
                 
+                
                 <section class="switch-part switch-part3">
                     <div id="js-friends">
                     
-                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://blog.csdn.net/baidu_21483933">csdn</a>
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
                     
-                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://segmentfault.com/blog/maocg_web">segmentfault</a>
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
                     
-                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://www.jianshu.com/users/eb37ef89c746/latest_articles">简书</a>
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
                     
                     </div>
                 </section>
                 
+
                 
                 
                 <section class="switch-part switch-part4">
                 
-                    <div id="js-aboutme">爱动漫,爱游戏,爱编程,爱运动,爱的太多了!</div>
+                    <div id="js-aboutme">专注于前端</div>
                 </section>
                 
             </div>
         </div>
-    </header>
+    </header>                
 </div>
-
     </div>
     <div class="mid-col">
       <nav id="mobile-nav">
@@ -233,9 +230,7 @@
     <div class="intrude-less">
         <header id="header" class="inner">
             <a href="/" class="profilepic">
-                
-                    <img lazy-src="/img/my.jpg" class="js-avatar">
-                
+                <img src="/img/my.jpg" class="animated zoomIn">
             </a>
             <hgroup>
               <h1 class="header-author"><a href="/" title="回到主页">Shan Zha</a></h1>
@@ -244,41 +239,48 @@
             <nav class="header-menu">
                 <ul>
                 
+                    <li><a href="/">主页</a></li>
+                
                     <li><a href="/archives/">所有文章</a></li>
                 
-                    <li><a href="/categories/开发工具/">玩转开发工具</a></li>
-                
-                    <li><a href="/categories/digital">玩转数码</a></li>
-                
-                    <li><a href="/categories/algorithm">算法学习</a></li>
-                
-                    <li><a href="/about/">关于我</a></li>
+                    <li><a href="/tags/">标签云</a></li>
                 
                 <div class="clearfix"></div>
                 </ul>
             </nav>
             <nav class="header-nav">
-                <div class="social">
-                    
-                        <a class="github" target="_blank" href="https://github.com/xiaoshanzha" title="github">github</a>
-                    
-                        <a class="weibo" target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
-                    
-                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
-                    
-                </div>
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:123@123.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/xiaoshanzha" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
             </nav>
-        </header>
+        </header>                
     </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
   
     <article id="post-java面向对象" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2018/09/24/java面向对象/" class="article-date">
+      <a href="/2018/09/24/java面向对象/" class="article-date">
       <time datetime="2018-09-24T09:27:20.000Z" itemprop="datePublished">2018-09-24</time>
 </a>
+
+ 
+    <a href="/2018/09/24/java面向对象/#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+        
+            <span class="disqus-comment-count" data-disqus-identifier="2018/09/24/java面向对象/"></span>
+        
+    </a>
 
     </div>
   
@@ -291,10 +293,9 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2018/09/24/java面向对象/">java面向对象</a>
+      <a class="article-title" href="/2018/09/24/java面向对象/">java面向对象</a>
     </h1>
   
-
 
       </header>
       
@@ -302,123 +303,11 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>java面向对象<br>[TOC]</p>
-<h3><span id="面向过程和面向对象的思想">面向过程和面向对象的思想</span></h3><pre><code>* a: 面向过程的程序设计方式，是遇到一件事时，思考“我该怎么做”，然后一步步实现的过程。
+              <p>java面向对象</p>
+<h3 id="面向过程和面向对象的思想"><a href="#面向过程和面向对象的思想" class="headerlink" title="面向过程和面向对象的思想"></a>面向过程和面向对象的思想</h3><pre><code>* a: 面向过程的程序设计方式，是遇到一件事时，思考“我该怎么做”，然后一步步实现的过程。
 * b: 面向对象的程序设计方式，是遇到一件事时，思考“我该让谁来做”，然后那个“谁”就是对象，他要怎么做这件事就是对象的方法。
-</code></pre><h3><span id="面向对象的好处">面向对象的好处</span></h3><pre><code>* a: 面向对象思维方式是一种更符合人们思考习惯的思想
-* b: 面向过程思维方式中更多的体现的是执行者（自己做事情），面向对象中更多的体现是指挥者（指挥对象做事情）。
-* c: 面向对象思维方式将复杂的问题简单化。
-</code></pre><h3><span id="一些基本概念">一些基本概念：</span></h3><h4><span id="堆和栈">堆和栈</span></h4><pre><code>栈内存中存放基本数据类型、局部变量，用完就消失。变量必须初始化。
-堆内存用来存放由new创建的对象和数组，靠垃圾回收机制不定期自动清除。变量会有默认值，不用初始化。
-</code></pre><h4><span id="成员变量和局部变量">成员变量和局部变量</span></h4><pre><code>区别：
-1.定义的位置不同
-    * 定义在类中的变量是成员变量
-    * 定义在方法中或者{}语句里面的变量是局部变量
-2.在内存中的位置不同
-    * 成员变量存储在堆内存的对象中
-    * 局部变量存储在栈内存的方法中
-3.声明周期不同
-    * 成员变量随着对象的出现而出现在堆中，随着对象的消失而从堆中消失
-    * 局部变量随着方法的运行而出现在栈中，随着方法的弹栈而消失
-4.初始化不同
-    * 成员变量因为在堆内存中，所有默认的初始化值
-    * 局部变量没有默认的初始化值，必须手动的给其赋值才可以使用。
-</code></pre><h3><span id="权限修饰符">权限修饰符</span></h3><table>
-<thead>
-<tr>
-<th style="text-align:center"></th>
-<th style="text-align:center">public</th>
-<th style="text-align:center">protected</th>
-<th style="text-align:center">默认的</th>
-<th style="text-align:center">private</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">当前类中</td>
-<td style="text-align:center">Y</td>
-<td style="text-align:center">Y</td>
-<td style="text-align:center">Y</td>
-<td style="text-align:center">Y</td>
-</tr>
-<tr>
-<td style="text-align:center">同一包中其它类</td>
-<td style="text-align:center">Y</td>
-<td style="text-align:center">Y</td>
-<td style="text-align:center">Y</td>
-</tr>
-<tr>
-<td style="text-align:center">不同包中子类</td>
-<td style="text-align:center">Y</td>
-<td style="text-align:center">Y</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">不同包中其他类</td>
-<td style="text-align:center">Y</td>
-<td style="text-align:center"></td>
-</tr>
-</tbody>
-</table>
-<h3><span id="final-static关键字">final、static关键字</span></h3><ul>
-<li>final关键字：最终<ul>
-<li>修饰的类：不能被继承</li>
-<li>修饰的变量：相当于是一个常量</li>
-<li>修饰的方法：子类不能重写，但可以继承使用</li>
-</ul>
-</li>
-<li>static关键字：静态<ul>
-<li>被静态所修饰的成员，可以通过类名直接调用<ul>
-<li>Person.name = “山楂”;<br>Person.method();</li>
-</ul>
-</li>
-<li>静态方法，随着类的加载而加载，优先于对象存在<br>在静态方法中，没有this关键字<br>静态方法中只能调用静态的成员变量和方法</li>
-</ul>
-</li>
-</ul>
-<h3><span id="三大特点封装-继承-多态">三大特点:封装、继承、多态</span></h3><ul>
-<li>封装：把对象的属性与方法的实现细节隐藏，仅对外提供一些公共的访问方式</li>
-<li>继承：子类会自动拥有父类所有可继承的属性和方法。</li>
-<li>多态：配合继承与方法重写提高了代码的复用性与扩展性；如果没有方法重写，则多态同样没有意义。</li>
-</ul>
-<h4><span id="1封装">1.封装</span></h4><h5><span id="私有private">私有private</span></h5><p>私有仅仅是封装的体现形式而已。<br>类中不需要对外提供的内容都私有化，包括属性和方法。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">	<span class="comment">// 私有成员变量，私有化后外界将不能访问.即隐藏了该属性</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">	<span class="keyword">private</span> String name;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5><span id="get-set方法">get、set方法</span></h5><p>向外界提供私有化内容的访问方式<br>描述事物，属性都私有化，并提供setXxx getXxx方法对其进行访问。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">person</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span>  <span class="keyword">int</span> old;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 对外提供设置成员变量的方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setOld</span><span class="params">(<span class="keyword">int</span> old)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.old = old;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 对外提供访问成员变量的方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getOld</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> old;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	person p = <span class="keyword">new</span> person();</span><br><span class="line"></span><br><span class="line">	p.setOld(<span class="number">5</span>);</span><br><span class="line">	System.out.println(p.getOld());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h5><span id="this关键字">this关键字</span></h5><p>当在方法中出现了局部变量和成员变量同名的时候，可以在成员变量名前面加上this.来区别成员变量和局部变量</p>
-<hr>
-<h4><span id="2继承">2.继承</span></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">格式：class Zi extends Fu &#123;&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>在一个现有类的基础上去构建一个新的类，构建出来的新类被称作子类，现有类被称作父类，子类会自动拥有父类所有属性方法。</li>
-<li>在Java中，类只支持单继承，不允许多继承，也就是说一个类只能有一个直接父类，</li>
-<li>Fu类中的成员变量是非私有的，子类中可以直接访问，若Fu类中的成员变量私有了，子类是不能直接访问的。</li>
-</ul>
-<h5><span id="super关键字">super关键字</span></h5><ul>
-<li><p>当子父类中出现了同名成员变量时，在子类中若要访问父类中的成员变量，必须使用关键字super来完成。super用来表示当前对象中包含的父类对象空间的引用。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">super.父类中的成员变量</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>方法重写(覆盖)<br>当在程序中通过对象调用方法时，会先在子类中查找有没有对应的方法，若子类中存在就会执行子类中的方法，若子类中不存在就会执行父类中相应的方法。子类中出现与父类一模一样的方法时，会出现覆盖操作，即重写。<br>注意：</p>
-<ul>
-<li>子类方法覆盖父类方法，必须要保证权限大于等于父类权限。</li>
-<li>写法上必须一模一样:方法的返回值类型 方法名 参数列表都要一样。</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h4><span id="3多态">3.多态</span></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">格式1：</span><br><span class="line">父类类型  变量名 = new 子类类型();</span><br><span class="line"></span><br><span class="line">格式2：</span><br><span class="line">接口 变量名 = new 接口实现类();</span><br></pre></td></tr></table></figure>
-<ul>
-<li>java中多态的代码体现在一个子类对象(实现类对象)既可以给这个子类(实现类对象)引用变量赋值，又可以给这个子类(实现类对象)的父类(接口)变量赋值</li>
-<li>多态最终体现为父类引用变量可以指向子类对象。</li>
-<li>多态的前提是必须有子父类关系或者类实现接口关系，否则无法完成多态。</li>
-<li>同一个父类的方法会被不同的子类重写。在调用方法时，调用的为各个子类重写后的方法。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Person p1 = <span class="keyword">new</span> Student();</span><br><span class="line">Person p2 = <span class="keyword">new</span> Teacher();</span><br><span class="line">p1.work(); <span class="comment">//p1会调用Student类中重写的work方法</span></span><br><span class="line">p2.work(); <span class="comment">//p2会调用Teacher类中重写的work方法</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>注意：</p>
-<ul>
-<li>多态成员变量： 编译运行都看左边（编译时期看引用型变量所属的类中是否有被调用的成员变量,没有则编译失败;运行时期，调用引用型变量所属的类中的成员变量。）</li>
-<li>多态成员方法： 编译看左边，运行看右边</li>
-</ul>
-<h3><span id="instance关键字">instance关键字</span></h3><p>判断某个对象是否属于某种数据类型<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//是返回true,不是返回false;</span><br><span class="line">boolean  b  = 对象  instanceof  数据类型;</span><br></pre></td></tr></table></figure></p>
-
+</code></pre>
+          
       
     </div>
     
@@ -428,14 +317,16 @@
 
       
       
+        <p class="article-more-link">
+          <a href="/2018/09/24/java面向对象/#more">阅读全文 >></a>
+        </p>
+      
       <div class="clearfix"></div>
     </div>
     
   </div>
   
 </article>
-
-
 
 
 
@@ -449,9 +340,19 @@
     <article id="post-vscode下markdown操作" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2018/09/19/vscode下markdown操作/" class="article-date">
+      <a href="/2018/09/19/vscode下markdown操作/" class="article-date">
       <time datetime="2018-09-19T00:04:46.000Z" itemprop="datePublished">2018-09-19</time>
 </a>
+
+ 
+    <a href="/2018/09/19/vscode下markdown操作/#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+        
+            <span class="disqus-comment-count" data-disqus-identifier="2018/09/19/vscode下markdown操作/"></span>
+        
+    </a>
 
     </div>
   
@@ -464,10 +365,9 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2018/09/19/vscode下markdown操作/">vscode下markdown操作</a>
+      <a class="article-title" href="/2018/09/19/vscode下markdown操作/">vscode下markdown操作</a>
     </h1>
   
-
 
       </header>
       
@@ -475,107 +375,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3><span id="用vscode写markdown操作">用vscode写markdown操作</span></h3><!-- ttoc -->
+              <!-- ttoc -->
 <hr>
-<h5><span id="1标题">1.标题</span></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 标题1</span><br><span class="line">## 标题2</span><br><span class="line">### 标题3</span><br><span class="line">#### 标题4</span><br><span class="line">##### 标题5</span><br><span class="line">###### 标题6</span><br></pre></td></tr></table></figure>
-<p>演示:</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/10460153-53f5e63d209674fd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<hr>
-<h5><span id="2分级标题">2.分级标题</span></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">一级标题</span><br><span class="line">==========</span><br><span class="line"></span><br><span class="line">二级标题</span><br><span class="line">----------</span><br><span class="line">注：实际为内容的下一行输&quot;-&quot;或“=”;最少可以写一个</span><br></pre></td></tr></table></figure>
-<p>演示：</p>
-<h1><span id="一级标题">一级标题</span></h1><h2><span id="二级标题">二级标题</span></h2><hr>
-<h5><span id="3粗体-斜体-删除线">3.粗体、斜体、删除线</span></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*表示斜体</span><br><span class="line">**表示粗体</span><br><span class="line">~~表示删除线</span><br></pre></td></tr></table></figure>
-<p>演示：</p>
-<p>这是<em>斜体</em><br>这是<strong>粗体</strong><br><del>这是错误的文本</del></p>
-<hr>
-<h5><span id="4引用">4.引用</span></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">方法一:(单行式)</span><br><span class="line">&gt; hello</span><br></pre></td></tr></table></figure>
-<p>演示：</p>
-<blockquote>
-<p>hello</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">方法二:(多行式)</span><br><span class="line">&gt; hello</span><br><span class="line">world</span><br></pre></td></tr></table></figure>
-<p>演示：</p>
-<blockquote>
-<p>hello<br>world</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">方法三:(多层嵌套)</span><br><span class="line">&gt;aaa</span><br><span class="line">&gt;&gt;bbb</span><br><span class="line">&gt;&gt;&gt;ccc</span><br></pre></td></tr></table></figure>
-<p>演示：</p>
-<blockquote>
-<p>aaa</p>
-<blockquote>
-<p>bbb</p>
-<blockquote>
-<p>ccc</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<hr>
-<h5><span id="5行内标记">5.行内标记</span></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">将标记代码块变成一行</span><br><span class="line">`aaaaaaaa</span><br><span class="line"> bbbbbbbb</span><br><span class="line"> cccccccc`</span><br></pre></td></tr></table></figure>
-<p>演示：<br><code>aaaaaaaa
- bbbbbbbb
- cccccccc</code></p>
-<hr>
-<h5><span id="6生成代码块">6.生成代码块</span></h5><p><img src="https://upload-images.jianshu.io/upload_images/10460153-36d8c03537a20654.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="https://upload-images.jianshu.io/upload_images/10460153-a180941d5082d2cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<hr>
-<h5><span id="7插入本地图片">7.插入本地图片</span></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![](./本地图片名)</span><br><span class="line">![](图片链接)</span><br></pre></td></tr></table></figure>
-<p>演示：<br><img src="https://upload-images.jianshu.io/upload_images/10460153-21356e5ad9a60b34.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<hr>
-<h5><span id="8有序-无序">8.有序、无序</span></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">有序：</span><br><span class="line">1. one</span><br><span class="line">2. two</span><br><span class="line">3. three</span><br><span class="line"></span><br><span class="line">无序：</span><br><span class="line">* one</span><br><span class="line">* two</span><br><span class="line">* three</span><br><span class="line"></span><br><span class="line">序表嵌套：</span><br><span class="line">1. one</span><br><span class="line">    * one-one</span><br><span class="line">    * one-two</span><br><span class="line">2. two</span><br><span class="line">    * two-one</span><br><span class="line">    * two-two</span><br></pre></td></tr></table></figure>
-<p>演示：</p>
-<ol>
-<li>one</li>
-<li>two</li>
-<li>three</li>
-</ol>
-<ul>
-<li>one</li>
-<li>two</li>
-<li>three</li>
-</ul>
-<ol>
-<li>one<ul>
-<li>one-one</li>
-<li>one-two</li>
-</ul>
-</li>
-<li>two<ul>
-<li>two-one</li>
-<li>two-two</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h5><span id="9任务列表">9.任务列表</span></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- [x] A</span><br><span class="line">- [ ] B</span><br><span class="line">- [ ] [正确]</span><br><span class="line">注：每个符号中间都有空格</span><br></pre></td></tr></table></figure>
-<p>演示：</p>
-<ul>
-<li style="list-style: none"><input type="checkbox" checked> A</li>
-<li style="list-style: none"><input type="checkbox"> B</li>
-<li style="list-style: none"><input type="checkbox"> [正确]</li>
-</ul>
-<hr>
-<h5><span id="10表格">10.表格</span></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">注： : 代表对齐方式 , : 与 | 之间不要有空格，否则对齐会有些不兼容</span><br><span class="line">|111111111 |22222222|33333333|</span><br><span class="line">|:- |:-:|-:|</span><br><span class="line">|居左|居中|居右|</span><br><span class="line">|a|b|c|</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">11111111</th>
-<th style="text-align:center">22222222</th>
-<th style="text-align:right">33333333</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">居左</td>
-<td style="text-align:center">居中</td>
-<td style="text-align:right">居右</td>
-</tr>
-<tr>
-<td style="text-align:left">a</td>
-<td style="text-align:center">b</td>
-<td style="text-align:right">c</td>
-</tr>
-</tbody>
-</table>
-
+<h5 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 标题1</span><br><span class="line">## 标题2</span><br><span class="line">### 标题3</span><br><span class="line">#### 标题4</span><br><span class="line">##### 标题5</span><br><span class="line">###### 标题6</span><br></pre></td></tr></table></figure>
+          
       
     </div>
     
@@ -585,14 +388,16 @@
 
       
       
+        <p class="article-more-link">
+          <a href="/2018/09/19/vscode下markdown操作/#more">阅读全文 >></a>
+        </p>
+      
       <div class="clearfix"></div>
     </div>
     
   </div>
   
 </article>
-
-
 
 
 
@@ -606,9 +411,19 @@
     <article id="post-my-first-blog" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2018/09/16/my-first-blog/" class="article-date">
+      <a href="/2018/09/16/my-first-blog/" class="article-date">
       <time datetime="2018-09-16T08:01:18.000Z" itemprop="datePublished">2018-09-16</time>
 </a>
+
+ 
+    <a href="/2018/09/16/my-first-blog/#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+        
+            <span class="disqus-comment-count" data-disqus-identifier="2018/09/16/my-first-blog/"></span>
+        
+    </a>
 
     </div>
   
@@ -621,10 +436,9 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2018/09/16/my-first-blog/">my-first-blog</a>
+      <a class="article-title" href="/2018/09/16/my-first-blog/">my-first-blog</a>
     </h1>
   
-
 
       </header>
       
@@ -657,38 +471,34 @@
 
 
 
-
-
   
   
-
 </div>
       <footer id="footer">
     <div class="outer">
         <div id="footer-info">
             <div class="footer-left">
-                &copy; 2018 Shan Zha
+                <i class="fa fa-copyright"></i> 
+                2016-2018 Shan Zha
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank">Hexo &nbsp;&nbsp;</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" >极客到访数: 
-                            <span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
                 
-                    <span>, </span>
+                    <span>| </span>
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit">本页阅读量: 
-                            <span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -696,92 +506,79 @@
         
     </div>
 </footer>
-
     </div>
     
-<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-
-<script src="/js/main.js"></script>
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
 
     <script>
         $(document).ready(function() {
-            var backgroundnum = 1;
-            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
-            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
-            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
         })
     </script>
 
 
-<!-- Google Analytics -->
-<script type="text/javascript">
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
 
-ga('create', 'xxxxx', 'auto');
-ga('send', 'pageview');
+    
+        <script id="dsq-count-scr" src="//.disqus.com/count.js" async></script>
+        <script>
+            if ($(".left-col").is(":visible")) {
+                var $disqusCount = $(".disqus-comment-count");
+                $disqusCount.bind("DOMNodeInserted", function(e) {
+                    var num = $(this).text().replace(/[^0-9]/ig,"");
+                    if (num > 0) {
+                        $(this).siblings(".count-comment").text(num);
+                    }
+                    $(this).remove();
+                })
+            } else {
+                $(".disqus-comment-count").remove();
+            }
+        </script>
+     
 
-</script>
-<!-- End Google Analytics -->
-
-
-
-	<script>
-	var _hmt = _hmt || [];
-	(function() {
-	  var hm = document.createElement("script");
-	  hm.src = "//hm.baidu.com/hm.js?xxxxxx";
-	  var s = document.getElementsByTagName("script")[0]; 
-	  s.parentNode.insertBefore(hm, s);
-	})();
-	</script>
 
 
 
 <div class="scroll" id="scroll">
-    <a href="#"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
-    $(document).ready(function() {
-        if ($("#comments").length < 1) {
-            $("#scroll > a:nth-child(2)").hide();
-        };
-    })
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
 </script>
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
-
-  <script language="javascript">
-    $(function() {
-        $("a[title]").each(function() {
-            var a = $(this);
-            var title = a.attr('title');
-            if (title == undefined || title == "") return;
-            a.data('title', title).removeAttr('title').hover(
-            function() {
-                var offset = a.offset();
-                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
-                    top: offset.top - a.outerHeight() - 15,
-                    left: offset.left + a.outerWidth()/2 + 1
-                }).fadeIn(function() {
-                    var pop = $(this);
-                    setTimeout(function() {
-                        pop.remove();
-                    }, pop.text().length * 800);
-                });
-            }, function() {
-                $("#anchortitlecontainer").remove();
-            });
-        });
-    });
-</script>
-
-
   </div>
 </body>
 </html>

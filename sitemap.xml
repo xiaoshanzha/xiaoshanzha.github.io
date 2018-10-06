@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2018/09/24/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</loc>
+    <loc>http://yoursite.com/tags/index.html</loc>
     
-    <lastmod>2018-09-24T09:28:21.095Z</lastmod>
+    <lastmod>2018-10-06T04:00:01.436Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/about/index.html</loc>
+    
+    <lastmod>2018-10-06T03:58:16.581Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2018/09/19/vscode%E4%B8%8Bmarkdown%E6%93%8D%E4%BD%9C/</loc>
     
-    <lastmod>2018-09-19T01:43:43.590Z</lastmod>
+    <lastmod>2018-10-06T03:52:50.901Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/09/24/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</loc>
+    
+    <lastmod>2018-10-06T03:50:54.632Z</lastmod>
     
   </url>
   
